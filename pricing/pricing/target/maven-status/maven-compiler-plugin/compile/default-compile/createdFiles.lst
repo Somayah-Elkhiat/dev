@@ -1,0 +1,7 @@
+com\product_pricing\pricing\ProductPricingController.class
+com\product_pricing\pricing\repository\ProductPricingRepository.class
+com\product_pricing\pricing\model\PriceModel.class
+com\product_pricing\pricing\entity\ProductPricing.class
+com\product_pricing\pricing\service\ProductPricingImpl.class
+com\product_pricing\pricing\PricingApplication.class
+com\product_pricing\pricing\service\ProductPricingService.class
