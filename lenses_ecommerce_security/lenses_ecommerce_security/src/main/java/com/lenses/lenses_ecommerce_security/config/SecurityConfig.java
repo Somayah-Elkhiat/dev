@@ -1,4 +1,4 @@
-package com.lenses.lenses_ecommerce_security.security;
+package com.lenses.lenses_ecommerce_security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;

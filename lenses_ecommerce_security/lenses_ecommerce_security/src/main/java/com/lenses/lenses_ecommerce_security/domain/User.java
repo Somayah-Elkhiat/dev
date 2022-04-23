@@ -22,6 +22,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -52,11 +54,6 @@ public class User {
 	@JsonIgnore
 	private List<UserAddress> address ;
 	
-
-
-	public User() {
-		super();
-	}
 
 	
 

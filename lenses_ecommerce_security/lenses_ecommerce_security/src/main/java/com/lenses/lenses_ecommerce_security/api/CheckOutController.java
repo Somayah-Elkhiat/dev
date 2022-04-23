@@ -53,11 +53,6 @@ public class CheckOutController {
 	UserService userService;
 	@Autowired
 	CheckoutService checkoutService;	
-	@Value("${paypal.client.id}")
-	private String clientId;
-
-	@Value("${paypal.client.secret}")
-	private String clientSecret;
 	
 	InitiatePaymentResponse order;
 	@Autowired

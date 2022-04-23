@@ -1,17 +1,21 @@
 package com.lenses.lenses_ecommerce_security;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lenses.lenses_ecommerce_security.domain.Role;
 import com.lenses.lenses_ecommerce_security.domain.User;
+import com.lenses.lenses_ecommerce_security.model.ReviewRequestModel;
 import com.lenses.lenses_ecommerce_security.service.UserService;
 @EnableFeignClients
 @SpringBootApplication
@@ -42,5 +46,16 @@ public class LensesEcommerceSecurityApplication {
 		};
 		
 	}
+	@Autowired
+	ObjectMapper objectMapper;
+	@Bean
+	CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
+		return args ->{
+			
+			kafkaTemplate.send("order", "Hello :)");
+		};
+		
+	}
+	
 
 }
