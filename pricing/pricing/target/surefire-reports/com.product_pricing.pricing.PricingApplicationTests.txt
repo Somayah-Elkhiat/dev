@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.product_pricing.pricing.PricingApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.49 s - in com.product_pricing.pricing.PricingApplicationTests
